@@ -1,0 +1,372 @@
+/'
+plantuml Character_Combination_Sheet.plantuml
+'/
+
+@startuml
+
+class Charakter {
+    + Geschlecht
+    + Rasse
+    + Klasse
+    + Waffenfertigkeit
+}
+
+enum Geschlecht {
+    Männlich
+    Weiblich
+}
+
+enum Rasse {
+    Mensch
+    Elf
+    Halbelf
+    Zwerg
+    Halbling
+    Gnom
+    Halbork
+}
+
+enum Mensch{
+    .. Kämpfer ..
+    + Kämpfer
+    + Berserker
+    + Magiertöter
+    + Kensai
+    .. Waldläufer
+    + Waldläufer
+    + Bogenschütze
+    + Pirscher
+    + Tiermeister
+    .. Paladin ..
+    + {static} Paladin
+    + {static} Geisterjäger
+    + {static} Ritter
+    + {static} Inquisitor
+    + {static} Finsterer Streiter
+    .. Kleriker ..
+    + Kleriker
+    + Kleriker von Helm
+    + Kleriker von Lathander
+    + Kleriker von Talos
+    + Kleriker von Tempus
+    + Kleriker von Tyr
+    .. Druide ..
+    + Druide
+    + Totemdruide
+    + Gestaltswandler
+    + Rächer
+    + Schamane
+    .. Mönch ..
+    + Mönch
+    + Sonnenseelenmönch
+    + Mönch des dunklen Mondes
+    .. Magier ..
+    + Magier
+    + Bannwirker
+    + Beschwörer
+    + Seher
+    + Zauberer
+    + Illusionist
+    + Thaumaturg
+    + Nekromant
+    + Wandler
+    + Hasardeur
+    + Hexenmeister
+    + Drachenjünger
+    .. Dieb ..
+    + Dieb
+    + Meuchelmörder
+    + Kopfgeldjäger
+    + Säbelrassler
+    + Schattentänzer
+    .. Barde ..
+    + Barde
+    + Waffenkünstler
+    + Gaukler
+    + Skalde
+
+
+}
+
+enum Elf {
+    .. Kämpfer ..
+    + Kämpfer
+    + Berserker
+    + Magiertöter
+    + Kensai
+    .. Waldläufer
+    + Waldläufer
+    + Bogenschütze
+    + Pirscher
+    + Tiermeister
+    .. Kleriker ..
+    + Kleriker
+    + Kleriker von Helm
+    + Kleriker von Lathander
+    + Kleriker von Talos
+    + Kleriker von Tempus
+    + Kleriker von Tyr
+        . Magier ..
+    + Magier
+    + Bannwirker
+    + Beschwörer
+    + Seher
+    + Zauberer
+    + Illusionist
+    + Thaumaturg
+    + Nekromant
+    + Wandler
+    + Hasardeur
+    + Hexenmeister
+    + Drachenjünger
+    .. Dieb ..
+    + Dieb
+    + Meuchelmörder
+    + Kopfgeldjäger
+    + Säbelrassler
+    + Schattentänzer
+
+}
+
+enum Halbelf {
+    .. Kämpfer ..
+    + Kämpfer
+    + Berserker
+    + Magiertöter
+    + Kensai
+    .. Waldläufer
+    + Waldläufer
+    + Bogenschütze
+    + Pirscher
+    + Tiermeister
+    .. Kleriker ..
+    + Kleriker
+    + Kleriker von Helm
+    + Kleriker von Lathander
+    + Kleriker von Talos
+    + Kleriker von Tempus
+    + Kleriker von Tyr
+    .. Druide ..
+    + Druide
+    + Totemdruide
+    + Gestaltswandler
+    + Rächer
+    + Schamane
+    .. Magier ..
+    + Magier
+    + Bannwirker
+    + Beschwörer
+    + Seher
+    + Zauberer
+    + Illusionist
+    + Thaumaturg
+    + Nekromant
+    + Wandler
+    + Hasardeur
+    + Hexenmeister
+    + Drachenjünger
+    .. Dieb ..
+    + Dieb
+    + Meuchelmörder
+    + Kopfgeldjäger
+    + Säbelrassler
+    + Schattentänzer
+    .. Barde ..
+    + Barde
+    + Waffenkünstler
+    + Gaukler
+    + Skalde
+
+}
+
+enum Zwerg {
+    .. Kämpfer ..
+    + Kämpfer
+    + Berserker
+    + Magiertöter
+    + Kensai
+    + {static} Zwergischer Verteidiger
+    .. Kleriker ..
+    + Kleriker
+    + Kleriker von Helm
+    + Kleriker von Lathander
+    + Kleriker von Talos
+    + Kleriker von Tempus
+    + Kleriker von Tyr
+    .. Dieb ..
+    + Dieb
+    + Meuchelmörder
+    + Kopfgeldjäger
+    + Säbelrassler
+    + Schattentänzer
+
+}
+
+enum Halbling {
+    .. Kämpfer ..
+    + Kämpfer
+    + Berserker
+    + Magiertöter
+    + Kensai
+    .. Kleriker ..
+    + Kleriker
+    + Kleriker von Helm
+    + Kleriker von Lathander
+    + Kleriker von Talos
+    + Kleriker von Tempus
+    + Kleriker von Tyr
+    .. Dieb ..
+    + Dieb
+    + Meuchelmörder
+    + Kopfgeldjäger
+    + Säbelrassler
+    + Schattentänzer
+
+}
+
+enum Gnom {
+    .. Kämpfer ..
+    + Kämpfer
+    + Berserker
+    + Magiertöter
+    + Kensai
+    .. Kleriker ..
+    + Kleriker
+    + Kleriker von Helm
+    + Kleriker von Lathander
+    + Kleriker von Talos
+    + Kleriker von Tempus
+    + Kleriker von Tyr
+    .. Magier ..
+    + Illusionist
+    .. Dieb ..
+    + Dieb
+    + Meuchelmörder
+    + Kopfgeldjäger
+    + Säbelrassler
+    + Schattentänzer
+
+}
+
+enum Halbork {
+    .. Kämpfer ..
+    + Kämpfer
+    + Berserker
+    + Magiertöter
+    + Kensai
+    .. Kleriker ..
+    + Kleriker
+    + Kleriker von Helm
+    + Kleriker von Lathander
+    + Kleriker von Talos
+    + Kleriker von Tempus
+    + Kleriker von Tyr
+    .. Druide ..
+    + Schamane
+    .. Dieb ..
+    + Dieb
+    + Meuchelmörder
+    + Kopfgeldjäger
+    + Säbelrassler
+    + Schattentänzer
+
+}
+
+enum DualKlasse {
+    + Kämpfer (13) > Kleriker
+    + Kämpfer (13) > Druide
+    + Kämpfer (13) > Magier
+    + Kämpfer (13) > Dieb
+    + Waldläufer (12) > Kleriker
+    + Kleriker > Kämpfer
+    + Kleriker > Waldläufer
+    + Kleriker > Magier
+    + Kleriker > Dieb
+    + Druide (12) > Kämpfer
+    + Magier > Kämpfer
+    + Magier > Kleriker
+    + Magier > Dieb
+    + Dieb > Kämpfer
+    + Dieb > Kleriker
+    + Dieb > Magier
+
+}
+
+enum Multiklasse {
+    .. Elf ..
+    + Kämpfer/Magier
+    + Kämpfer/Dieb
+    + Magier/Dieb
+    + Kämpfer/Magier/Dieb
+    .. Halbelf ..
+    + Kämpfer/Kleriker
+    + Kämpfer/Druide
+    + Kämpfer/Magier
+    + Kämpfer/Dieb
+    + {static} Kleriker/Waldläufer
+    + Kleriker/Magier
+    + Magier/Dieb
+    + Kämpfer/Magier/Kleriker
+    + Kämpfer/Magier/Dieb
+    .. Zwerg ..
+    + Kämpfer/Kleriker
+    + Kämpfer/Dieb
+    .. Halbling ..
+    + Kämpfer/Dieb
+    .. Gnom ..
+    + Kämpfer/Kleriker
+    + {static} Kämpfer/Illusionist
+    + Kämpfer/Dieb
+    + {static} Kleriker/Illusionist
+    + Kleriker/Dieb
+    + {static} Illusionist/Dieb
+    .. Halbork ..
+    + Kämpfer/Kleriker
+    + Kämpfer/Dieb
+    + Kleriker/Dieb
+}
+
+enum Waffenfertigkeit {
+    + Bastardschwert
+    + Langschwert
+    + Kurzschwert
+    + Axt
+    + Zweihänder
+    + Katana
+    + Krummsäbel/Wakizashi/Ninjato
+    + Dolch
+    + Kriegshammer
+    + Keule
+    + Speer
+    + Hellebarde
+    + Flegel/Morgenstern
+    + Streitkolben
+    + Kampfstab
+    + Armbrust
+    + Langbogen
+    + Kurzbogen
+    + Wurfpfeil
+    + Schleuder
+}
+
+Charakter --> Geschlecht
+Geschlecht --> Rasse
+
+Rasse --> Mensch
+Rasse --> Elf
+Rasse --> Halbelf
+Rasse --> Zwerg
+Rasse --> Halbling
+Rasse --> Gnom
+Rasse --> Halbork
+
+Mensch --> DualKlasse
+
+Elf --> Multiklasse
+Halbelf --> Multiklasse
+Zwerg --> Multiklasse
+Halbling --> Multiklasse
+Gnom --> Multiklasse
+Halbork --> Multiklasse
+
+@enduml

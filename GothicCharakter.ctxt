@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=gilde
+comment0.target=GothicCharakter(java.lang.String)
+comment1.params=
+comment1.target=GothicCharakter\ generiereZufaelligenCharakter()
+comment2.params=
+comment2.target=java.lang.String\ toString()
+numComments=3
